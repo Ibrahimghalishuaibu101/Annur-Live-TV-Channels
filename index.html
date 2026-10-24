@@ -334,7 +334,7 @@ function parsePlaylist(text) {
     if (!info) continue;
 
     const nameMatch = info.match(/,(.*)$/);
-const logoMatch = info.match(/tvg-logo\s*=\s*"([^"]*)"/i);const logoMatch = info.match(/tvg-logo ="([^"]*)"/i);
+    const logoMatch = info.match(/tvg-logo\s*=\s*"([^"]*)"/i);
     const countryMatch = info.match(/tvg-country="([^"]*)"/i);
     const groupMatch = info.match(/group-title="([^"]*)"/i);
     const languageMatch = info.match(/tvg-language="([^"]*)"/i);
