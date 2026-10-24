@@ -1,1 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<title>Annur Live TV Channels</title>
+<style>
+:root{color-scheme:dark;--bg:#07111f;--panel:#101d30;--panel2:#172840;--text:#f3f7ff;--muted:#a6b5ca;--accent:#28c6a6;--line:#263952;--danger:#ff7c85}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#09192a,#07111f 45%);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:10px 13px;background:var(--panel2);color:var(--text)}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}button.primary{background:var(--accent);color:#06211c;border-color:transparent;font-weight:750}button:disabled{opacity:.5;cursor:not-allowed}.app{max-width:1200px;margin:auto;padding:16px 14px 90px}.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}.brand{display:flex;gap:12px;align-items:center}.brandmark{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#22d3ad,#087c9c);display:grid;place-items:center;font-weight:900;color:#041c24;font-size:20px}.brand h1{font-size:clamp(20px,4vw,28px);margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}.status{font-size:12px;color:var(--muted);padding:7px 10px;border:1px solid var(--line);border-radius:99px}.hero{margin:18px 0;padding:18px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(ellipse at top right,#174b58 0,transparent 48%),var(--panel)}.hero h2{margin:0 0 5px;font-size:22px}.hero p{margin:0;color:var(--muted)}.toolbar{display:grid;grid-template-columns:1fr 170px 170px;gap:9px;margin:16px 0}.field{width:100%;min-width:0;padding:12px 13px;border-radius:12px;border:1px solid var(--line);background:#0b1727;color:var(--text)}.tabs{display:flex;gap:8px;overflow:auto;padding:3px 0 12px;margin-bottom:12px}.tabs button{white-space:nowrap}.tabs button.active{background:var(--accent);color:#05231d;border-color:transparent;font-weight:800}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}.section-head h2{font-size:19px;margin:0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}.card{min-width:0;border:1px solid var(--line);background:rgba(16,29,48,.94);border-radius:17px;padding:12px;display:flex;gap:11px;align-items:center}.logo,.fallback{width:55px;height:55px;flex:0 0 55px;border-radius:13px;object-fit:contain;background:#eaf1f8;color:#122236;display:grid;place-items:center;font-size:22px;font-weight:850;padding:5px}.channel-info{min-width:0;flex:1}.channel-info strong{display:block;overflow-wrap:anywhere}.channel-info small{display:block;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}.card-actions{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.card-actions button{padding:7px 9px;font-size:12px}.empty,.notice{border:1px dashed #3a506d;border-radius:16px;padding:22px;text-align:center;color:var(--muted);background:rgba(16,29,48,.55)}.notice.error{border-color:#8b414c;color:#ffd5d9}.player-wrap{border:1px solid var(--line);background:#02070c;border-radius:18px;overflow:hidden;margin:12px 0}.player-wrap video{display:block;width:100%;max-height:65vh;background:#02070c;aspect-ratio:16/9}.player-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:10px;background:var(--panel)}.player-tools span{color:var(--muted);font-size:13px}.timeline{display:grid;gap:10px}.guide-row{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:12px;display:grid;grid-template-columns:minmax(130px,190px) 1fr;gap:12px}.guide-channel{display:flex;gap:10px;align-items:center;min-width:0}.guide-channel .logo,.guide-channel .fallback{width:42px;height:42px;flex-basis:42px}.programs{display:grid;gap:8px}.program{background:#0b1829;border:1px solid var(--line);border-radius:12px;padding:10px}.program h3{font-size:14px;margin:0 0 4px}.program p{font-size:12px;color:var(--muted);margin:0 0 8px}.program .tag{font-size:11px;color:#82e9d5}.bottom-nav{position:fixed;z-index:10;bottom:0;left:0;right:0;display:flex;justify-content:center;gap:5px;padding:9px max(8px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));background:rgba(5,13,24,.95);backdrop-filter:blur(14px);border-top:1px solid var(--line)}.bottom-nav button{flex:1;max-width:180px;padding:9px 5px;font-size:12px;background:transparent;border-color:transparent}.bottom-nav button.active{background:#183b48;color:#8df3df}.settings-box{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:16px;margin:12px 0}.settings-box h3{margin:0 0 8px}.settings-box p{color:var(--muted);margin:6px 0}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.tiny{font-size:12px}.loading{display:inline-block;width:14px;height:14px;border:2px solid #557084;border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle;margin-right:7px}@keyframes spin{to{transform:rotate(360deg)}}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}@media(max-width:700px){.toolbar{grid-template-columns:1fr 1fr}.toolbar input{grid-column:1/-1}.guide-row{grid-template-columns:1fr}.app{padding-left:11px;padding-right:11px}.bottom-nav button{font-size:11px}.hero{padding:15px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><div class="brandmark">A</div><div><h1>Annur Live TV Channels</h1><p>Discover live television around the world</p></div></div>
+    <div class="status" id="connectionStatus">Ready to load channels</div>
+  </header>
+  <section class="hero"><h2>Your world. Your channels.</h2><p>Search international channels, save favorites, view verified guide data when available, and manage program reminders.</p></section>
 
+  <section id="playerSection" hidden>
+    <div class="section-head"><h2 id="nowPlayingTitle">Now playing</h2><span class="muted" id="playerStatus">Choose a channel to begin</span></div>
+    <div class="player-wrap"><video id="videoPlayer" controls playsinline preload="none"></video><div class="player-tools"><span id="playerMessage">Select a channel to play.</span><div class="row" style="flex:0 0 auto"><button id="retryBtn" type="button">Retry</button><button id="pipBtn" type="button">Picture-in-Picture</button></div></div></div>
+  </section>
+
+  <div class="toolbar">
+    <input class="field" id="searchInput" type="search" placeholder="Search channels by name…" aria-label="Search channels">
+    <select class="field" id="countryFilter" aria-label="Filter by country"><option value="">All countries</option></select>
+    <select class="field" id="categoryFilter" aria-label="Filter by category"><option value="">All categories</option></select>
+  </div>
+  <nav class="tabs" aria-label="Channel views">
+    <button class="active" data-view="watch">Watch</button><button data-view="guide">Guide</button><button data-view="favorites">Favorites</button><button data-view="history">History</button><button data-view="reminders">Reminders</button><button data-view="settings">Settings</button>
+  </nav>
+  <main>
+    <div class="section-head"><h2 id="sectionTitle">Channels</h2><span class="muted" id="countLabel">Loading channel list…</span></div>
+    <div id="messageArea" class="notice"><span class="loading"></span>Loading the public channel playlist. This can take a moment.</div>
+    <div id="channelGrid" class="grid"></div>
+    <div id="guideArea" class="timeline" hidden></div>
+    <div id="otherArea" hidden></div>
+  </main>
+  <p class="footer">Channel availability and logos depend on the original providers. Program schedules are shown only when verified guide data is available.</p>
+</div>
+<nav class="bottom-nav" aria-label="Main navigation">
+  <button class="active" data-view="watch">📺<br>Watch</button><button data-view="guide">🗓️<br>Guide</button><button data-view="favorites">❤️<br>Favorites</button><button data-view="history">🕘<br>History</button><button data-view="settings">⚙️<br>Settings</button>
+</nav>
+<script>
+"use strict";
+const PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
+const EPG_URL = "https://iptv-org.github.io/epg/guides/all.xml";
+const MAX_RENDER = 180;
+const STORE = {favorites:"annur_favorites_v1",history:"annur_history_v1",reminders:"annur_reminders_v1",settings:"annur_settings_v1"};
+const $ = id => document.getElementById(id);
+const state = {channels:[],filtered:[],view:"watch",current:null,playlistLoaded:false,epgLoaded:false,epg:[],epgError:"",hls:null,loading:false};
+function readStore(key,fallback){try{const x=JSON.parse(localStorage.getItem(key)||"null");return x===null?fallback:x}catch{return fallback}}
+function writeStore(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+function favorites(){return readStore(STORE.favorites,[])}
+function historyItems(){return readStore(STORE.history,[])}
+function reminders(){return readStore(STORE.reminders,[])}
+function safeText(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function getAttr(info,key){
+  const escaped=key.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const re=new RegExp("(?:^|\\s)"+escaped+"\\s*=\\s*(?:\"([^\"]*)\"|'([^']*)'|([^\\s,]+))","i");
+  const m=info.match(re); return m ? (m[1]??m[2]??m[3]??"").trim() : "";
+}
+function parsePlaylist(text){
+  const lines=text.replace(/^\uFEFF/,"").split(/\r?\n/); const out=[]; let info="";
+  for(const raw of lines){const line=raw.trim();if(!line)continue;
+    if(line.startsWith("#EXTINF")){info=line.slice(7);continue}
+    if(line.startsWith("#"))continue;
+    if(/^https?:\/\//i.test(line)){
+      const comma=info.lastIndexOf(","); const name=(comma>=0?info.slice(comma+1):"").trim()||getAttr(info,"tvg-name")||"Unnamed channel";
+      out.push({id:line+"|"+name,name,url:line,logo:getAttr(info,"tvg-logo"),country:getAttr(info,"tvg-country"),language:getAttr(info,"tvg-language"),group:getAttr(info,"group-title"),epgId:getAttr(info,"tvg-id")});info="";
+    }
+  }
+  return out;
+}
+function setMessage(message,type=""){const el=$("messageArea");el.className="notice"+(type?" "+type:"");el.textContent=message;el.hidden=!message}
+function logoElement(channel,small=false){
+  const fallback=document.createElement("div");fallback.className="fallback"+(small?" logo":"");fallback.textContent=(channel.name||"?").trim().charAt(0).toUpperCase()||"?";fallback.setAttribute("aria-label",(channel.name||"Channel")+" logo unavailable");
+  if(!channel.logo)return fallback;
+  const img=document.createElement("img");img.className="logo";img.loading="lazy";img.alt=(channel.name||"")+" logo";img.referrerPolicy="no-referrer";img.src=channel.logo;
+  img.onerror=()=>{if(img.isConnected)img.replaceWith(fallback)};
+  return img;
+}
+function uniqueValues(key){return [...new Set(state.channels.map(c=>c[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b))}
+function populateFilters(){
+  const country=$("countryFilter"),category=$("categoryFilter");
+  country.innerHTML='<option value="">All countries</option>'+uniqueValues("country").map(x=>`<option value="${safeText(x)}">${safeText(x)}</option>`).join("");
+  category.innerHTML='<option value="">All categories</option>'+uniqueValues("group").map(x=>`<option value="${safeText(x)}">${safeText(x)}</option>`).join("");
+}
+function applyFilters(){
+  const q=$("searchInput").value.trim().toLowerCase(),country=$("countryFilter").value,group=$("categoryFilter").value;
+  state.filtered=state.channels.filter(c=>(!q||c.name.toLowerCase().includes(q)||c.country.toLowerCase().includes(q)||c.language.toLowerCase().includes(q))&&(!country||c.country===country)&&(!group||c.group===group));
+  render();
+}
+function makeChannelCard(channel){
+  const card=document.createElement("article");card.className="card";
+  card.appendChild(logoElement(channel));
+  const info=document.createElement("div");info.className="channel-info";
+  const title=document.createElement("strong");title.textContent=channel.name;
+  const detail=document.createElement("small");detail.textContent=[channel.country,channel.group,channel.language].filter(Boolean).join(" · ")||"International channel";
+  info.append(title,detail);
+  const actions=document.createElement("div");actions.className="card-actions";
+  const watch=document.createElement("button");watch.className="primary";watch.textContent="▶ Watch";watch.onclick=()=>playChannel(channel);
+  const fav=document.createElement("button");fav.textContent=favorites().includes(channel.id)?"♥ Saved":"♡ Save";fav.setAttribute("aria-label","Toggle favorite");fav.onclick=()=>toggleFavorite(channel);
+  actions.append(watch,fav);info.append(actions);card.append(info);return card;
+}
+function render(){
+  const isChannelView=["watch","favorites","history"].includes(state.view);
+  $("channelGrid").hidden=!isChannelView;$("guideArea").hidden=state.view!=="guide";$("otherArea").hidden=!["reminders","settings"].includes(state.view);
+  $("messageArea").hidden=true;$("countLabel").textContent="";
+  const titles={watch:"Channels",guide:"TV Guide",favorites:"Favorite channels",history:"Recently watched",reminders:"Program reminders",settings:"Settings"};
+  $("sectionTitle").textContent=titles[state.view]||"Channels";
+  if(isChannelView){
+    let list=state.filtered;
+    if(state.view==="favorites"){const ids=favorites();list=state.channels.filter(c=>ids.includes(c.id))}
+    if(state.view==="history"){const ids=historyItems();list=ids.map(id=>state.channels.find(c=>c.id===id)).filter(Boolean)}
+    $("channelGrid").replaceChildren();
+    if(!state.playlistLoaded){setMessage("The channel playlist has not loaded yet. Check your connection and retry in Settings.");return}
+    if(!list.length){setMessage(state.view==="favorites"?"No favorites yet. Save a channel with the ♡ Save button.":state.view==="history"?"No viewing history yet. Play a channel to see it here.":"No channels match your search or filters.");return}
+    $("countLabel").textContent=`${list.length} channel${list.length===1?"":"s"}${list.length>MAX_RENDER?` · showing first ${MAX_RENDER}`:""}`;
+    list.slice(0,MAX_RENDER).forEach(c=>$("channelGrid").appendChild(makeChannelCard(c)));return;
+  }
+  if(state.view==="guide"){renderGuide();return}
+  if(state.view==="reminders"){renderReminders();return}
+  if(state.view==="settings"){renderSettings();return}
+}
+function toggleFavorite(channel){
+  let ids=favorites();if(ids.includes(channel.id))ids=ids.filter(x=>x!==channel.id);else ids.unshift(channel.id);
+  writeStore(STORE.favorites,ids);render();
+}
+function recordHistory(channel){
+  let ids=historyItems().filter(x=>x!==channel.id);ids.unshift(channel.id);writeStore(STORE.history,ids.slice(0,100));
+}
+function loadHlsLibrary(){
+  return new Promise(resolve=>{
+    if(window.Hls){resolve(true);return}
+    const s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js";s.onload=()=>resolve(!!window.Hls);s.onerror=()=>resolve(false);document.head.appendChild(s);
+  });
+}
+async function playChannel(channel){
+  state.current=channel;$("playerSection").hidden=false;$("nowPlayingTitle").textContent=channel.name;$("playerStatus").textContent="Connecting…";$("playerMessage").innerHTML='<span class="loading"></span>Connecting to stream…';$("retryBtn").disabled=true;
+  $("playerSection").scrollIntoView({behavior:"smooth",block:"start"});
+  const video=$("videoPlayer");
+  try{if(state.hls){state.hls.destroy();state.hls=null}video.pause();video.removeAttribute("src");video.load();
+    const isHls=/\.m3u8(?:$|[?#])/i.test(channel.url);
+    if(isHls&&!video.canPlayType("application/vnd.apple.mpegurl")){
+      const available=await loadHlsLibrary();
+      if(available&&window.Hls.isSupported()){state.hls=new window.Hls({enableWorker:true,lowLatencyMode:false,maxBufferLength:20});state.hls.loadSource(channel.url);state.hls.attachMedia(video);state.hls.on(window.Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>{}));state.hls.on(window.Hls.Events.ERROR,(_,data)=>{if(data.fatal)playbackFailed("The stream could not be played. It may be offline or blocked by the provider.")})}
+      else throw new Error("This browser does not support this stream format.");
+    }else{video.src=channel.url;video.load();video.play().catch(()=>{ $("playerMessage").textContent="Press Play in the video controls. If it fails, try Retry.";});}
+    recordHistory(channel);render();$("retryBtn").disabled=false;
+  }catch(e){playbackFailed(e.message||"Unable to start this stream.")}
+}
+function playbackFailed(message){$("playerStatus").textContent="Playback failed";$("playerMessage").textContent=message;$("retryBtn").disabled=!state.current}
+$("videoPlayer").addEventListener("waiting",()=>{$("playerStatus").textContent="Buffering…";$("playerMessage").textContent="Buffering. Please wait."});
+$("videoPlayer").addEventListener("playing",()=>{$("playerStatus").textContent="Playing";$("playerMessage").textContent="Stream is playing.";$("retryBtn").disabled=false});
+$("videoPlayer").addEventListener("error",()=>{if(state.current)playbackFailed("This stream failed to load. It may be unavailable, unsupported, or blocked by its provider.")});
+$("retryBtn").addEventListener("click",()=>{if(state.current)playChannel(state.current)});
+$("pipBtn").addEventListener("click",async()=>{
+ const v=$("videoPlayer");
+ try{if(document.pictureInPictureEnabled&&v.requestPictureInPicture)await v.requestPictureInPicture();else{$("playerMessage").textContent="Picture-in-Picture is not supported by this browser or video."}}catch{$("playerMessage").textContent="Picture-in-Picture could not start. Try after playback begins."}
+});
+function formatTime(date){return new Intl.DateTimeFormat(undefined,{hour:"numeric",minute:"2-digit"}).format(date)}
+function parseXmlTime(value){if(!value)return null;const d=new Date(value);return Number.isNaN(d.getTime())?null:d}
+async function loadGuideData(){
+  if(state.epgLoaded||state.epgError)return;
+  try{
+    const res=await fetch(EPG_URL,{cache:"no-cache"});if(!res.ok)throw new Error("Guide source returned HTTP "+res.status);
+    const xmlText=await res.text();const doc=new DOMParser().parseFromString(xmlText,"application/xml");
+    if(doc.querySelector("parsererror"))throw new Error("Guide data could not be read");
+    const now=Date.now(),channels=new Map();
+    doc.querySelectorAll("channel").forEach(el=>{const id=el.getAttribute("id");const name=el.querySelector("display-name")?.textContent?.trim();if(id)channels.set(id,name||id)});
+    const programs=[];
+    doc.querySelectorAll("programme").forEach(el=>{
+      const start=parseXmlTime(el.getAttribute("start")),stop=parseXmlTime(el.getAttribute("stop"));if(!start||!stop||stop<=start)return;
+      if(stop.getTime()<now-30*60*1000||start.getTime()>now+24*60*60*1000)return;
+      const title=el.querySelector("title")?.textContent?.trim();if(!title)return;
+      programs.push({channelId:el.getAttribute("channel")||"",title,description:el.querySelector("desc")?.textContent?.trim()||"",start:start.toISOString(),stop:stop.toISOString()});
+    });
+    state.epg=programs;state.epgChannels=channels;state.epgLoaded=true;
+  }catch(e){state.epgError=e.message||"Guide data is temporarily unavailable"}
+}
+function guideMatch(channel){
+ const ids=[channel.epgId,channel.name].filter(Boolean).map(x=>x.toLowerCase());
+ const candidates=state.epg.filter(p=>{const n=(state.epgChannels?.get(p.channelId)||p.channelId).toLowerCase();return ids.some(id=>id===n||id===p.channelId.toLowerCase())});
+ const now=Date.now();return candidates.sort((a,b)=>new Date(a.start)-new Date(b.start)).filter(p=>new Date(p.stop).getTime()>now&&new Date(p.start).getTime()<now+24*60*60*1000).slice(0,4);
+}
+async function renderGuide(){
+ const area=$("guideArea");area.replaceChildren();
+ const info=document.createElement("div");info.className="notice";info.innerHTML='<span class="loading"></span>Loading program schedules from the public EPG source. Schedules may not exist for every channel.';area.append(info);
+ await loadGuideData();area.replaceChildren();
+ if(state.epgError){const n=document.createElement("div");n.className="notice error";n.textContent="Guide data could not be loaded: "+state.epgError+". You can retry from this page.";const b=document.createElement("button");b.textContent="Retry Guide";b.onclick=async()=>{state.epgError="";state.epgLoaded=false;await renderGuide()};n.append(document.createElement("br"),b);area.append(n);return}
+ const list=(state.filtered.length?state.filtered:state.channels).slice(0,80);let shown=0;
+ for(const ch of list){
+  const programs=guideMatch(ch);if(!programs.length)continue;shown++;
+  const row=document.createElement("section");row.className="guide-row";
+  const head=document.createElement("div");head.className="guide-channel";head.append(logoElement(ch,true));const label=document.createElement("strong");label.textContent=ch.name;head.append(label);
+  const progWrap=document.createElement("div");progWrap.className="programs";
+  programs.forEach(p=>{const card=document.createElement("article");card.className="program";const h=document.createElement("h3");h.textContent=p.title;const times=document.createElement("p");times.textContent=`${formatTime(new Date(p.start))} – ${formatTime(new Date(p.stop))}${new Date(p.start)<=new Date()&&new Date(p.stop)>new Date()?" · NOW":""}`;const actions=document.createElement("div");actions.className="row";const reminder=document.createElement("button");reminder.textContent=reminders().some(r=>r.programKey===programKey(p))?"Reminder saved":"＋ Reminder";reminder.onclick=()=>addReminder(ch,p);actions.append(reminder);card.append(h,times);if(p.description){const d=document.createElement("p");d.textContent=p.description;card.append(d)}card.append(actions);progWrap.append(card)});
+  row.append(head,progWrap);area.append(row);
+ }
+ if(!shown){const n=document.createElement("div");n.className="empty";n.textContent="No verified program schedule data matched these channels at this time. The guide will not invent listings. Try another channel or check again later.";area.append(n)}
+}
+function programKey(p){return [p.channelId,p.title,p.start,p.stop].join("|")}
+function addReminder(channel,p){
+ const key=programKey(p);let list=reminders();if(list.some(r=>r.programKey===key)){alert("A reminder for this program is already saved.");return}
+ list.push({id:crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random(),programKey:key,channelId:channel.id,channelName:channel.name,title:p.title,start:p.start,stop:p.stop,createdAt:new Date().toISOString()});
+ if(!writeStore(STORE.reminders,list)){alert("Could not save this reminder on this device.");return}
+ if("Notification" in window&&Notification.permission==="granted")scheduleLocalNotice(list[list.length-1]);
+ alert("Reminder saved in this app on this device. Browser notifications may not run reliably when the app is closed.");
+ render();
+}
+function scheduleLocalNotice(r){
+ const delay=new Date(r.start).getTime()-Date.now();if(delay<=0||delay>2147480000)return;
+ setTimeout(()=>{try{new Notification("Program reminder: "+r.title,{body:r.channelName+" starts now."})}catch{}},delay);
+}
+function renderReminders(){
+ const area=$("otherArea");area.replaceChildren();const list=reminders().sort((a,b)=>new Date(a.start)-new Date(b.start));
+ const intro=document.createElement("div");intro.className="settings-box";intro.innerHTML="<h3>Your program reminders</h3><p>Reminders are saved locally on this device. Browser notifications depend on permission and platform support; they may not fire if the browser is closed.</p>";
+ const enable=document.createElement("button");enable.textContent="Enable browser notifications";enable.onclick=async()=>{if(!("Notification" in window)){alert("Notifications are not supported here.");return}const permission=await Notification.requestPermission();alert("Notification permission: "+permission);if(permission==="granted")list.forEach(scheduleLocalNotice)};intro.append(enable);area.append(intro);
+ if(!list.length){const empty=document.createElement("div");empty.className="empty";empty.textContent="No reminders saved. Open Guide and choose ＋ Reminder beside a verified program.";area.append(empty);return}
+ list.forEach(r=>{const box=document.createElement("div");box.className="settings-box";const h=document.createElement("h3");h.textContent=r.title;const p=document.createElement("p");p.textContent=`${r.channelName} · ${formatTime(new Date(r.start))} · ${new Date(r.start).toLocaleDateString()}`;const row=document.createElement("div");row.className="row";const edit=document.createElement("button");edit.textContent="Edit reminder";edit.onclick=()=>{const raw=prompt("Enter new start date/time (local), e.g. 2026-12-25 18:30",new Date(r.start).toLocaleString());if(!raw)return;const parsed=new Date(raw);if(Number.isNaN(parsed.getTime())){alert("That date/time could not be understood.");return}r.start=parsed.toISOString();r.programKey=r.programKey+"|edited|"+r.start;const all=reminders().map(x=>x.id===r.id?r:x);writeStore(STORE.reminders,all);renderReminders()};const cancel=document.createElement("button");cancel.textContent="Cancel reminder";cancel.onclick=()=>{if(confirm("Cancel this reminder?")){writeStore(STORE.reminders,reminders().filter(x=>x.id!==r.id));renderReminders()}};row.append(edit,cancel);box.append(h,p,row);area.append(box)})
+}
+function renderSettings(){
+ const area=$("otherArea");area.replaceChildren();
+ const box=document.createElement("div");box.className="settings-box";box.innerHTML="<h3>Playback & data</h3><p>Channel source: public IPTV playlist. This app cannot guarantee every third-party stream is online or permitted in every region.</p><p>Guide source: public XMLTV EPG. Listings appear only when schedule data matches a channel.</p><p>Favorites, history, and reminders are saved in this browser on this device. Cross-device Pi account sync requires a verified Pi SDK sign-in and backend integration.</p>";
+ const row=document.createElement("div");row.className="row";
+ const reload=document.createElement("button");reload.textContent="Reload channel list";reload.onclick=()=>loadChannels(true);
+ const clearHistory=document.createElement("button");clearHistory.textContent="Clear history";clearHistory.onclick=()=>{if(confirm("Clear viewing history on this device?")){writeStore(STORE.history,[]);render()}};
+ const clearFav=document.createElement("button");clearFav.textContent="Clear favorites";clearFav.onclick=()=>{if(confirm("Remove all saved favorites on this device?")){writeStore(STORE.favorites,[]);render()}};
+ row.append(reload,clearHistory,clearFav);box.append(row);
+ const diag=document.createElement("p");diag.className="tiny";diag.textContent=`Playlist: ${state.playlistLoaded?"loaded":"not loaded"} · Guide: ${state.epgLoaded?"loaded":state.epgError?"error":"not loaded"}`;box.append(diag);area.append(box);
+}
+async function loadChannels(force=false){
+ if(state.loading)return;state.loading=true;$("connectionStatus").textContent="Loading channels…";setMessage("Loading channel playlist…");
+ try{const res=await fetch(PLAYLIST_URL,{cache:force?"reload":"default"});if(!res.ok)throw new Error("Playlist returned HTTP "+res.status);
+  const text=await res.text();const channels=parsePlaylist(text);if(!channels.length)throw new Error("The playlist loaded but contained no recognizable channel streams.");
+  state.channels=channels;state.playlistLoaded=true;state.filtered=channels;populateFilters();$("connectionStatus").textContent=`${channels.length.toLocaleString()} channels loaded`;setMessage("");applyFilters();
+ }catch(e){state.playlistLoaded=false;$("connectionStatus").textContent="Playlist unavailable";setMessage("Could not load the public channel list: "+(e.message||"network error")+". Check your internet connection, then open Settings and tap Reload channel list.","error");$("countLabel").textContent="Channel list unavailable"}
+ finally{state.loading=false}
+}
+document.querySelectorAll("[data-view]").forEach(btn=>btn.addEventListener("click",()=>{
+ state.view=btn.dataset.view;document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===state.view));render();
+}));
+$("searchInput").addEventListener("input",applyFilters);$("countryFilter").addEventListener("change",applyFilters);$("categoryFilter").addEventListener("change",applyFilters);
+loadChannels();
+</script>
+</body>
+</html>
