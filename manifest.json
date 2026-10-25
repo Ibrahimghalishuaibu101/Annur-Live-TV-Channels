@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Annur Live TV Channels",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Annur TV",
+  "start_url": "/",
+  "theme_color": "#07111f",
+  "id": "annur-live-tv-channels"
+}
